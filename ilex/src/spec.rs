@@ -297,6 +297,7 @@ impl Lexeme<rule::Any> {
 #[macro_export]
 macro_rules! __spec__ {
   (
+    #[spec]
     $(#[$meta:meta])*
     $vis:vis struct $name:ident {$(
       $(#[$($fmeta:tt)*])*

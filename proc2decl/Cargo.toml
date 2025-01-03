@@ -1,8 +1,6 @@
 [package]
-name = "ilex-attr"
-version = "0.5.0"
-description = "attributes for the ilex crate"
-
+name = "proc2decl"
+version = "0.1.0"
 edition.workspace = true
 authors.workspace = true
 homepage.workspace = true
@@ -10,9 +8,7 @@ repository.workspace = true
 keywords.workspace = true
 license.workspace = true
 
-[lib]
-path = "lib.rs"
-proc-macro = true
-
 [dependencies]
-proc2decl = { path = "../../proc2decl" }
+nu-glob = "0.101.0"
+unicode-xid = "0.2.6"
+walkdir = "2.5.0"
