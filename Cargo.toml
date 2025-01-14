@@ -3,6 +3,7 @@ members = [
   "allman",
   "byteyarn",
   "buf-trait",
+  "gilded", "gilded/attr",
   "ilex", "ilex/attr",
   "proc2decl",
   "twie",
