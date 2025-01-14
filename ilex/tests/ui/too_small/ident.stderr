@@ -1,0 +1,9 @@
+error: expected at least 3 characters in identifier, but found only 2
+ --> too_small/ident.txt:1:13
+  |
+1 | %foo $bar % $oo
+  |             ^^^ expected at least 3 here
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:315:28
+
+error: aborting due to previous error

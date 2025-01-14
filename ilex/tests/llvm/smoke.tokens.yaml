@@ -1,0 +1,453 @@
+- ident:
+    lexeme: 32
+    span: {span: [52, 57], text: "@.str"}
+    prefix: {span: [52, 53], text: "@"}
+    name: {span: [53, 57], text: ".str"}
+- keyword:
+    lexeme: 8
+    span: {span: [58, 59], text: "="}
+- keyword:
+    lexeme: 26
+    span: {span: [60, 67], text: "private"}
+- keyword:
+    lexeme: 27
+    span: {span: [68, 80], text: "unnamed_addr"}
+- keyword:
+    lexeme: 17
+    span: {span: [81, 89], text: "constant"}
+- bracket:
+    lexeme: 2
+    span: {span: [90, 99], text: "[13 x i8]"}
+    delims:
+    - {span: [90, 91], text: "["}
+    - {span: [98, 99], text: "]"}
+    contents:
+    - ident:
+        lexeme: 34
+        span: {span: [91, 93], text: "13"}
+        radix: 10
+        blocks: [{span: [91, 93], text: "13"}]
+        exponents: []
+    - keyword:
+        lexeme: 10
+        span: {span: [94, 95], text: "x"}
+    - ident:
+        lexeme: 24
+        span: {span: [96, 98], text: "i8"}
+        prefix: {span: [96, 97], text: "i"}
+        radix: 10
+        blocks: [{span: [97, 98], text: "8"}]
+        exponents: []
+- quoted:
+    lexeme: 30
+    span:
+      span: [100, 120]
+      text: "c\"hello world\\0A\\00\""
+    prefix: {span: [100, 101], text: "c"}
+    delims:
+    - {span: [101, 102], text: "\""}
+    - {span: [119, 120], text: "\""}
+    contents:
+    - text: {span: [102, 113], text: "hello world"}
+    - esc: {span: [113, 114], text: "\\"}
+      data: {span: [114, 116], text: "0A"}
+    - esc: {span: [116, 117], text: "\\"}
+      data: {span: [117, 119], text: "00"}
+- keyword:
+    lexeme: 18
+    span: {span: [166, 173], text: "declare"}
+- ident:
+    lexeme: 24
+    span: {span: [174, 177], text: "i32"}
+    prefix: {span: [174, 175], text: "i"}
+    radix: 10
+    blocks: [{span: [175, 177], text: "32"}]
+    exponents: []
+- quoted:
+    lexeme: 33
+    span:
+      span: [178, 197]
+      text: "@\"non trivial name\""
+    prefix: {span: [178, 179], text: "@"}
+    delims:
+    - {span: [179, 180], text: "\""}
+    - {span: [196, 197], text: "\""}
+    contents:
+    - text:
+        span: [180, 196]
+        text: "non trivial name"
+- bracket:
+    lexeme: 1
+    span:
+      span: [197, 212]
+      text: "(ptr nocapture)"
+    delims:
+    - {span: [197, 198], text: "("}
+    - {span: [211, 212], text: ")"}
+    contents:
+    - keyword:
+        lexeme: 23
+        span: {span: [198, 201], text: "ptr"}
+    - keyword:
+        lexeme: 28
+        span: {span: [202, 211], text: "nocapture"}
+- keyword:
+    lexeme: 29
+    span: {span: [213, 221], text: "nounwind"}
+- keyword:
+    lexeme: 19
+    span: {span: [253, 259], text: "define"}
+- ident:
+    lexeme: 24
+    span: {span: [260, 263], text: "i32"}
+    prefix: {span: [260, 261], text: "i"}
+    radix: 10
+    blocks: [{span: [261, 263], text: "32"}]
+    exponents: []
+- ident:
+    lexeme: 32
+    span: {span: [264, 269], text: "@main"}
+    prefix: {span: [264, 265], text: "@"}
+    name: {span: [265, 269], text: "main"}
+- bracket:
+    lexeme: 1
+    span:
+      span: [269, 285]
+      text: "(i32 %0, ptr %1)"
+    delims:
+    - {span: [269, 270], text: "("}
+    - {span: [284, 285], text: ")"}
+    contents:
+    - ident:
+        lexeme: 24
+        span: {span: [270, 273], text: "i32"}
+        prefix: {span: [270, 271], text: "i"}
+        radix: 10
+        blocks: [{span: [271, 273], text: "32"}]
+        exponents: []
+    - ident:
+        lexeme: 32
+        span: {span: [274, 276], text: "%0"}
+        prefix: {span: [274, 275], text: "%"}
+        name: {span: [275, 276], text: "0"}
+    - keyword:
+        lexeme: 7
+        span: {span: [276, 277], text: ","}
+    - keyword:
+        lexeme: 23
+        span: {span: [278, 281], text: "ptr"}
+    - ident:
+        lexeme: 32
+        span: {span: [282, 284], text: "%1"}
+        prefix: {span: [282, 283], text: "%"}
+        name: {span: [283, 284], text: "1"}
+- bracket:
+    lexeme: 4
+    span:
+      span: [286, 401]
+      text: |
+        {
+          ; Call puts function to write out the string to stdout.
+          call i32 @"non trivial name"(ptr @.str)
+          ret i32 0
+        }
+    delims:
+    - {span: [286, 287], text: "{"}
+    - {span: [400, 401], text: "}"}
+    contents:
+    - keyword:
+        lexeme: 12
+        span: {span: [348, 352], text: "call"}
+    - ident:
+        lexeme: 24
+        span: {span: [353, 356], text: "i32"}
+        prefix: {span: [353, 354], text: "i"}
+        radix: 10
+        blocks: [{span: [354, 356], text: "32"}]
+        exponents: []
+    - quoted:
+        lexeme: 33
+        span:
+          span: [357, 376]
+          text: "@\"non trivial name\""
+        prefix: {span: [357, 358], text: "@"}
+        delims:
+        - {span: [358, 359], text: "\""}
+        - {span: [375, 376], text: "\""}
+        contents:
+        - text:
+            span: [359, 375]
+            text: "non trivial name"
+    - bracket:
+        lexeme: 1
+        span: {span: [376, 387], text: "(ptr @.str)"}
+        delims:
+        - {span: [376, 377], text: "("}
+        - {span: [386, 387], text: ")"}
+        contents:
+        - keyword:
+            lexeme: 23
+            span: {span: [377, 380], text: "ptr"}
+        - ident:
+            lexeme: 32
+            span: {span: [381, 386], text: "@.str"}
+            prefix: {span: [381, 382], text: "@"}
+            name: {span: [382, 386], text: ".str"}
+    - keyword:
+        lexeme: 15
+        span: {span: [390, 393], text: "ret"}
+    - ident:
+        lexeme: 24
+        span: {span: [394, 397], text: "i32"}
+        prefix: {span: [394, 395], text: "i"}
+        radix: 10
+        blocks: [{span: [395, 397], text: "32"}]
+        exponents: []
+    - ident:
+        lexeme: 34
+        span: {span: [398, 399], text: "0"}
+        radix: 10
+        blocks: [{span: [398, 399], text: "0"}]
+        exponents: []
+- ident:
+    lexeme: 32
+    span: {span: [420, 422], text: "!0"}
+    prefix: {span: [420, 421], text: "!"}
+    name: {span: [421, 422], text: "0"}
+- keyword:
+    lexeme: 8
+    span: {span: [423, 424], text: "="}
+- bracket:
+    lexeme: 6
+    span:
+      span: [425, 451]
+      text: "!{i32 42, null, !\"string\"}"
+    delims:
+    - {span: [425, 427], text: "!{"}
+    - {span: [450, 451], text: "}"}
+    contents:
+    - ident:
+        lexeme: 24
+        span: {span: [427, 430], text: "i32"}
+        prefix: {span: [427, 428], text: "i"}
+        radix: 10
+        blocks: [{span: [428, 430], text: "32"}]
+        exponents: []
+    - ident:
+        lexeme: 34
+        span: {span: [431, 433], text: "42"}
+        radix: 10
+        blocks: [{span: [431, 433], text: "42"}]
+        exponents: []
+    - keyword:
+        lexeme: 7
+        span: {span: [433, 434], text: ","}
+    - keyword:
+        lexeme: 22
+        span: {span: [435, 439], text: "null"}
+    - keyword:
+        lexeme: 7
+        span: {span: [439, 440], text: ","}
+    - quoted:
+        lexeme: 33
+        span: {span: [441, 450], text: "!\"string\""}
+        prefix: {span: [441, 442], text: "!"}
+        delims:
+        - {span: [442, 443], text: "\""}
+        - {span: [449, 450], text: "\""}
+        contents: [{text: {span: [443, 449], text: "string"}}]
+- ident:
+    lexeme: 32
+    span: {span: [452, 456], text: "!foo"}
+    prefix: {span: [452, 453], text: "!"}
+    name: {span: [453, 456], text: "foo"}
+- keyword:
+    lexeme: 8
+    span: {span: [457, 458], text: "="}
+- bracket:
+    lexeme: 6
+    span: {span: [459, 464], text: "!{!0}"}
+    delims:
+    - {span: [459, 461], text: "!{"}
+    - {span: [463, 464], text: "}"}
+    contents:
+    - ident:
+        lexeme: 32
+        span: {span: [461, 463], text: "!0"}
+        prefix: {span: [461, 462], text: "!"}
+        name: {span: [462, 463], text: "0"}
+- ident:
+    lexeme: 32
+    span: {span: [465, 469], text: "@glb"}
+    prefix: {span: [465, 466], text: "@"}
+    name: {span: [466, 469], text: "glb"}
+- keyword:
+    lexeme: 8
+    span: {span: [470, 471], text: "="}
+- keyword:
+    lexeme: 20
+    span: {span: [472, 478], text: "global"}
+- ident:
+    lexeme: 24
+    span: {span: [479, 481], text: "i8"}
+    prefix: {span: [479, 480], text: "i"}
+    radix: 10
+    blocks: [{span: [480, 481], text: "8"}]
+    exponents: []
+- ident:
+    lexeme: 34
+    span: {span: [482, 483], text: "0"}
+    radix: 10
+    blocks: [{span: [482, 483], text: "0"}]
+    exponents: []
+- keyword:
+    lexeme: 19
+    span: {span: [485, 491], text: "define"}
+- keyword:
+    lexeme: 25
+    span: {span: [492, 496], text: "void"}
+- ident:
+    lexeme: 32
+    span: {span: [497, 499], text: "@f"}
+    prefix: {span: [497, 498], text: "@"}
+    name: {span: [498, 499], text: "f"}
+- bracket:
+    lexeme: 1
+    span: {span: [499, 507], text: "(ptr %a)"}
+    delims:
+    - {span: [499, 500], text: "("}
+    - {span: [506, 507], text: ")"}
+    contents:
+    - keyword:
+        lexeme: 23
+        span: {span: [500, 503], text: "ptr"}
+    - ident:
+        lexeme: 32
+        span: {span: [504, 506], text: "%a"}
+        prefix: {span: [504, 505], text: "%"}
+        name: {span: [505, 506], text: "a"}
+- bracket:
+    lexeme: 4
+    span:
+      span: [508, 666]
+      text: |
+        {
+          %c = icmp eq ptr %a, @glb
+          br i1 %c, label %BB_EXIT, label %BB_CONTINUE ; escapes %a
+        BB_EXIT:
+          call void @exit()
+          unreachable
+        BB_CONTINUE:
+          ret void
+        }
+    delims:
+    - {span: [508, 509], text: "{"}
+    - {span: [665, 666], text: "}"}
+    contents:
+    - ident:
+        lexeme: 32
+        span: {span: [512, 514], text: "%c"}
+        prefix: {span: [512, 513], text: "%"}
+        name: {span: [513, 514], text: "c"}
+    - keyword:
+        lexeme: 8
+        span: {span: [515, 516], text: "="}
+    - keyword:
+        lexeme: 13
+        span: {span: [517, 521], text: "icmp"}
+    - keyword:
+        lexeme: 14
+        span: {span: [522, 524], text: "eq"}
+    - keyword:
+        lexeme: 23
+        span: {span: [525, 528], text: "ptr"}
+    - ident:
+        lexeme: 32
+        span: {span: [529, 531], text: "%a"}
+        prefix: {span: [529, 530], text: "%"}
+        name: {span: [530, 531], text: "a"}
+    - keyword:
+        lexeme: 7
+        span: {span: [531, 532], text: ","}
+    - ident:
+        lexeme: 32
+        span: {span: [533, 537], text: "@glb"}
+        prefix: {span: [533, 534], text: "@"}
+        name: {span: [534, 537], text: "glb"}
+    - keyword:
+        lexeme: 11
+        span: {span: [540, 542], text: "br"}
+    - ident:
+        lexeme: 24
+        span: {span: [543, 545], text: "i1"}
+        prefix: {span: [543, 544], text: "i"}
+        radix: 10
+        blocks: [{span: [544, 545], text: "1"}]
+        exponents: []
+    - ident:
+        lexeme: 32
+        span: {span: [546, 548], text: "%c"}
+        prefix: {span: [546, 547], text: "%"}
+        name: {span: [547, 548], text: "c"}
+    - keyword:
+        lexeme: 7
+        span: {span: [548, 549], text: ","}
+    - keyword:
+        lexeme: 21
+        span: {span: [550, 555], text: "label"}
+    - ident:
+        lexeme: 32
+        span: {span: [556, 564], text: "%BB_EXIT"}
+        prefix: {span: [556, 557], text: "%"}
+        name: {span: [557, 564], text: "BB_EXIT"}
+    - keyword:
+        lexeme: 7
+        span: {span: [564, 565], text: ","}
+    - keyword:
+        lexeme: 21
+        span: {span: [566, 571], text: "label"}
+    - ident:
+        lexeme: 32
+        span: {span: [572, 584], text: "%BB_CONTINUE"}
+        prefix: {span: [572, 573], text: "%"}
+        name: {span: [573, 584], text: "BB_CONTINUE"}
+    - ident:
+        lexeme: 31
+        span: {span: [598, 606], text: "BB_EXIT:"}
+        suffix: {span: [605, 606], text: ":"}
+        name: {span: [598, 605], text: "BB_EXIT"}
+    - keyword:
+        lexeme: 12
+        span: {span: [609, 613], text: "call"}
+    - keyword:
+        lexeme: 25
+        span: {span: [614, 618], text: "void"}
+    - ident:
+        lexeme: 32
+        span: {span: [619, 624], text: "@exit"}
+        prefix: {span: [619, 620], text: "@"}
+        name: {span: [620, 624], text: "exit"}
+    - bracket:
+        lexeme: 1
+        span: {span: [624, 626], text: "()"}
+        delims:
+        - {span: [624, 625], text: "("}
+        - {span: [625, 626], text: ")"}
+        contents: []
+    - keyword:
+        lexeme: 16
+        span: {span: [629, 640], text: "unreachable"}
+    - ident:
+        lexeme: 31
+        span: {span: [641, 653], text: "BB_CONTINUE:"}
+        suffix: {span: [652, 653], text: ":"}
+        name: {span: [641, 652], text: "BB_CONTINUE"}
+    - keyword:
+        lexeme: 15
+        span: {span: [656, 659], text: "ret"}
+    - keyword:
+        lexeme: 25
+        span: {span: [660, 664], text: "void"}
+- eof:
+    lexeme: 2147483647
+    span: {span: [666, 666], text: ""}

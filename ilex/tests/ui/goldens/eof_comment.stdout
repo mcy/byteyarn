@@ -1,9 +1,0 @@
-error: expected closing `*/`, but found <eof>
- --> <input>:1:38
-  |
-1 | /* ok /* nested */ */ /* /* not ok */ 
-  |                                      ^ expected `*/` here
-  |                       -- help: previously opened here
-  |
-
-error: aborting due to previous error

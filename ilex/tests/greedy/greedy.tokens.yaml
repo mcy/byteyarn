@@ -1,0 +1,52 @@
+- keyword:
+    lexeme: 3
+    span: {span: [0, 6], text: "poison"}
+- ident:
+    lexeme: 4
+    span: {span: [7, 16], text: "poisonous"}
+    name: {span: [7, 16], text: "poisonous"}
+- quoted:
+    lexeme: 0
+    span:
+      span: [17, 32]
+      text: "poisonous[xyz]>"
+    delims:
+    - {span: [17, 27], text: "poisonous["}
+    - {span: [30, 32], text: "]>"}
+    contents: [{text: {span: [27, 30], text: "xyz"}}]
+- quoted:
+    lexeme: 0
+    span:
+      span: [33, 56]
+      text: "poisonous#%#%[xyz]#%#%>"
+    delims:
+    - {span: [33, 47], text: "poisonous#%#%["}
+    - {span: [50, 56], text: "]#%#%>"}
+    contents: [{text: {span: [47, 50], text: "xyz"}}]
+- ident:
+    lexeme: 4
+    span: {span: [57, 66], text: "poisonous"}
+    name: {span: [57, 66], text: "poisonous"}
+- bracket:
+    lexeme: 2
+    span: {span: [67, 72], text: "[xyz]"}
+    delims:
+    - {span: [67, 68], text: "["}
+    - {span: [71, 72], text: "]"}
+    contents:
+    - ident:
+        lexeme: 4
+        span: {span: [68, 71], text: "xyz"}
+        name: {span: [68, 71], text: "xyz"}
+- quoted:
+    lexeme: 1
+    span:
+      span: [73, 93]
+      text: "R\"cc(some c++)\" )cc\""
+    delims:
+    - {span: [73, 78], text: "R\"cc("}
+    - {span: [89, 93], text: ")cc\""}
+    contents: [{text: {span: [78, 89], text: "some c++)\" "}}]
+- eof:
+    lexeme: 2147483647
+    span: {span: [93, 93], text: ""}

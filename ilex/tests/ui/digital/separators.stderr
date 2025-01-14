@@ -1,0 +1,65 @@
+error: unexpected digit separator in `no_prefix@`-prefixed number
+ --> digital/separators.txt:2:11
+  |
+2 | no_prefix@_123_._456_e_789_._012_
+  |           ^
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:387:36
+
+error: unexpected digit separator in `no_suffix@`-prefixed number
+ --> digital/separators.txt:3:33
+  |
+3 | no_suffix@_123_._456_e_789_._012_
+  |                                 ^
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:474:28
+
+error: unexpected digit separator in `no_point@`-prefixed number
+ --> digital/separators.txt:4:15
+  |
+4 | no_point@_123_._456_e_789_._012_
+  |               ^
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:404:32
+
+error: unexpected digit separator in `no_point@`-prefixed number
+ --> digital/separators.txt:4:16
+  |
+4 | no_point@_123_._456_e_789_._012_
+  |                ^
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:387:36
+
+error: unexpected digit separator in `no_point@`-prefixed number
+ --> digital/separators.txt:4:27
+  |
+4 | no_point@_123_._456_e_789_._012_
+  |                           ^
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:404:32
+
+error: unexpected digit separator in `no_point@`-prefixed number
+ --> digital/separators.txt:4:28
+  |
+4 | no_point@_123_._456_e_789_._012_
+  |                            ^
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:387:36
+
+error: unexpected digit separator in `no_exp@`-prefixed number
+ --> digital/separators.txt:5:19
+  |
+5 | no_exp@_123_._456_e_789_._012_
+  |                   ^
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:424:34
+
+error: unexpected digit separator in `no_exp@`-prefixed number
+ --> digital/separators.txt:5:20
+  |
+5 | no_exp@_123_._456_e_789_._012_
+  |                    ^
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:387:36
+
+error: aborting due to 8 errors

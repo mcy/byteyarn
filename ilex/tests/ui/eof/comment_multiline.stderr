@@ -1,0 +1,11 @@
+error: expected closing `*/`, but found <eof>
+ --> eof/comment_multiline.txt:4:15
+  |
+3 | /*
+  | -- help: previously opened here
+4 |   /* not ok */
+  |               ^ expected `*/` here
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:306:14
+
+error: aborting due to previous error

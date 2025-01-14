@@ -1,0 +1,28 @@
+error: unexpected `q` in `%`-prefixed number
+ --> ambiguous/no_xid_after_nm.txt:1:10
+  |
+1 | %123 %123qua
+  |          ^
+  |      ------- help: because this value is decimal (base 10), digits should be within '0'..='9'
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:562:34
+
+error: unexpected `u` in `%`-prefixed number
+ --> ambiguous/no_xid_after_nm.txt:1:11
+  |
+1 | %123 %123qua
+  |           ^
+  |      ------- help: because this value is decimal (base 10), digits should be within '0'..='9'
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:562:34
+
+error: unexpected `a` in `%`-prefixed number
+ --> ambiguous/no_xid_after_nm.txt:1:12
+  |
+1 | %123 %123qua
+  |            ^
+  |      ------- help: because this value is decimal (base 10), digits should be within '0'..='9'
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:562:34
+
+error: aborting due to 3 errors

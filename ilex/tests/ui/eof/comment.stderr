@@ -1,0 +1,10 @@
+error: expected closing `*/`, but found <eof>
+ --> eof/comment.txt:1:38
+  |
+1 | /* ok /* nested */ */ /* /* not ok */ 
+  |                                      ^ expected `*/` here
+  |                       -- help: previously opened here
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:306:14
+
+error: aborting due to previous error

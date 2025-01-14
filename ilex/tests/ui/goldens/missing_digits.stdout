@@ -1,9 +1,0 @@
-error: expected digits after `0x`, but found ` `
- --> <input>:3:3
-  |
-3 | 0x 0xf
-  |   ^ expected digits after `0x`
-  | ^^ because of this prefix
-  |
-
-error: aborting due to previous error

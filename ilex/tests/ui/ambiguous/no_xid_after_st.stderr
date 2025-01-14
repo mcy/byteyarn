@@ -1,0 +1,10 @@
+error: extraneous characters after `%'...'q`
+ --> ambiguous/no_xid_after_st.txt:1:16
+  |
+1 | q'xyz'q %'xyz'qua
+  |                ^^
+  |               -- help: maybe you meant to include a space here
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:779:10
+
+error: aborting due to previous error

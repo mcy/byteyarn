@@ -1,0 +1,39 @@
+error: expected closing `)`, but found `]`
+ --> eof/mixed_brackets_multiline.txt:6:3
+  |
+5 |   (
+  |   - help: previously opened here
+6 |   ]
+  |   ^ expected `)` here
+  |
+  = note: reported at: ilex/src/rt/lexer.rs:202:23
+
+error: unexpected closing `)`
+ --> eof/mixed_brackets_multiline.txt:9:3
+  |
+9 |   )
+  |   ^ expected to be opened by `(`
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:254:22
+
+error: expected closing `)`, but found `]`
+  --> eof/mixed_brackets_multiline.txt:11:1
+   |
+10 |   (
+   |   - help: previously opened here
+11 | ]
+   | ^ expected `)` here
+   |
+   = note: reported at: ilex/src/rt/lexer.rs:202:23
+
+error: expected closing `)`, but found <eof>
+  --> eof/mixed_brackets_multiline.txt:11:2
+   |
+10 |   (
+   |   - help: previously opened here
+11 | ] 
+   |  ^ expected `)` here
+   |
+   = note: reported at: ilex/src/rt/lexer.rs:311:10
+
+error: aborting due to 4 errors

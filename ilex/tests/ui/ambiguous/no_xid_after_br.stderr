@@ -1,0 +1,9 @@
+error: unexpected closing `able`
+ --> ambiguous/no_xid_after_br.txt:1:28
+  |
+1 | $[] $null[]null $null[]nullable
+  |                            ^^^^ expected to be opened by `--able`
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:254:22
+
+error: aborting due to previous error

@@ -1,9 +1,0 @@
-error: extraneous characters after `%'...'q`
- --> <input>:1:16
-  |
-1 | q'xyz'q %'xyz'qua
-  |                ^^
-  |               -- help: maybe you meant to include a space here
-  |
-
-error: aborting due to previous error

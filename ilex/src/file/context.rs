@@ -101,6 +101,28 @@ impl Context {
     self.file(idx).unwrap()
   }
 
+  /// Adds a new file to this source context, validating that it is valid
+  /// UTF-8.
+  pub fn new_file_from_bytes<'a>(
+    &self,
+    path: impl Into<&'a Utf8Path>,
+    text: impl Into<Vec<u8>>,
+    report: &Report,
+  ) -> Result<File, Fatal> {
+    let path = path.into();
+    let text = String::from_utf8(text.into()).map_err(|e| {
+      let n = e.utf8_error().valid_up_to();
+      let b = e.as_bytes()[n];
+
+      report
+        .error(f!("input file `{path}` was not valid UTF-8"))
+        .note(f!("encountered non-UTF-8 byte {b:#02x} at offset {n}"));
+      report.fatal().unwrap()
+    })?;
+
+    Ok(self.new_file(path, text))
+  }
+
   /// Adds a new file to this source context by opening `name` and reading it
   /// from the file system.
   pub fn open_file<'a>(
@@ -118,12 +140,7 @@ impl Context {
       }
     };
 
-    let Ok(utf8) = String::from_utf8(bytes) else {
-      report.error(f!("input file `{path}` was not valid UTF-8"));
-      return report.fatal();
-    };
-
-    Ok(self.new_file(path, utf8))
+    self.new_file_from_bytes(path, bytes, report)
   }
 
   /// Gets the `idx`th file in this source context.

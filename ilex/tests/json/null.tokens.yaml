@@ -1,0 +1,6 @@
+- keyword:
+    lexeme: 4
+    span: {span: [0, 4], text: "null"}
+- eof:
+    lexeme: 2147483647
+    span: {span: [4, 4], text: ""}

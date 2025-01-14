@@ -1,0 +1,10 @@
+error: expected closing `'`, but found <eof>
+ --> eof/quoted_multiline.txt:3:5
+  |
+3 | 'bar
+  |     ^ expected `'` here
+  | - help: previously opened here
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:691:14
+
+error: aborting due to previous error
