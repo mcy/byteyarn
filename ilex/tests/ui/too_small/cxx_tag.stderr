@@ -1,0 +1,18 @@
+error: expected at least 1 character in identifier, but found none
+ --> too_small/cxx_tag.txt:1:14
+  |
+1 | R'c(foo)c' R'(foo)' Q'foo(bar)foo' Q'oo(bar)oo'
+  |              ^ expected at least 1 here
+  |
+  = help: this appears to be an empty identifier
+  = note: reported at: ilex/src/rt/emit2.rs:223:14
+
+error: expected at least 3 characters in identifier, but found only 2
+ --> too_small/cxx_tag.txt:1:38
+  |
+1 | R'c(foo)c' R'(foo)' Q'foo(bar)foo' Q'oo(bar)oo'
+  |                                      ^^ expected at least 3 here
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:223:14
+
+error: aborting due to 2 errors

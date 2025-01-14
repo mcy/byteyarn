@@ -1,0 +1,10 @@
+error: extraneous characters after `--null ... null`
+ --> ambiguous/no_xid_after_cm.txt:1:51
+  |
+1 | --null some stuff null --null some more stuff nullnull
+  |                                                   ^^^^
+  |                                                  -- help: maybe you meant to include a space here
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:779:10
+
+error: aborting due to previous error

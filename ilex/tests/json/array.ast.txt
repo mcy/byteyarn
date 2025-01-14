@@ -1,0 +1,11 @@
+Arr(
+    [
+        Null,
+        Bool(
+            true,
+        ),
+        Bool(
+            false,
+        ),
+    ],
+)

@@ -1,0 +1,28 @@
+error: unexpected `b` in `/`-suffixed number
+ --> ambiguous/idents.txt:1:6
+  |
+1 | /foo/bar/
+  |      ^
+  |      --- help: because this value is decimal (base 10), digits should be within '0'..='9'
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:562:34
+
+error: unexpected `a` in `/`-suffixed number
+ --> ambiguous/idents.txt:1:7
+  |
+1 | /foo/bar/
+  |       ^
+  |      --- help: because this value is decimal (base 10), digits should be within '0'..='9'
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:562:34
+
+error: unexpected `r` in `/`-suffixed number
+ --> ambiguous/idents.txt:1:8
+  |
+1 | /foo/bar/
+  |        ^
+  |      --- help: because this value is decimal (base 10), digits should be within '0'..='9'
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:562:34
+
+error: aborting due to 3 errors

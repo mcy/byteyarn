@@ -1,8 +1,0 @@
-error: expected at least 3 characters in identifier, but found only 2
- --> <input>:1:13
-  |
-1 | %foo $bar % $oo
-  |             ^^^ expected at least 3 here
-  |
-
-error: aborting due to previous error

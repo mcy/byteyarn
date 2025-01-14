@@ -1,0 +1,10 @@
+error: expected closing `]`, but found <eof>
+ --> eof/bracket.txt:1:11
+  |
+1 | [[[]]] [[]
+  |           ^ expected `]` here
+  |        - help: previously opened here
+  |
+  = note: reported at: ilex/src/rt/lexer.rs:311:10
+
+error: aborting due to previous error

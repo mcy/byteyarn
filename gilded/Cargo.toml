@@ -1,0 +1,23 @@
+[package]
+name = "gilded"
+version = "0.1.0"
+description = "Dead simple golden tests"
+
+edition.workspace = true
+authors.workspace = true
+homepage.workspace = true
+repository.workspace = true
+keywords.workspace = true
+license.workspace = true
+
+[dependencies]
+gilded-attr = { path = "attr" }
+
+allman = { path = "../allman" }
+byteyarn = { path = "../byteyarn" }
+
+camino = "1.1.9"
+diffy = "0.4.0"
+nu-glob = "0.101.0"
+unicode-width = "0.2.0"
+

@@ -1,0 +1,9 @@
+error: unexpected closing `ua`
+ --> ambiguous/no_xid_after_id.txt:1:22
+  |
+1 | /foo%q /null%q /foo%qua
+  |                      ^^ expected to be opened by `--ua`
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:254:22
+
+error: aborting due to previous error

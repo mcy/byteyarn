@@ -1,0 +1,9 @@
+error: unexpected closing `nullable`
+ --> ambiguous/no_xid_after_kw.txt:1:6
+  |
+1 | null nullable
+  |      ^^^^^^^^ expected to be opened by `--nullable`
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:254:22
+
+error: aborting due to previous error

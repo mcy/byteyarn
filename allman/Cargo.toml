@@ -1,0 +1,16 @@
+[package]
+name = "allman"
+version = "0.1.0"
+description = "source code formatting and line reflowing toolkit"
+
+edition.workspace = true
+authors.workspace = true
+homepage.workspace = true
+repository.workspace = true
+keywords.workspace = true
+license.workspace = true
+
+[dependencies]
+byteyarn = { path = "../byteyarn" }
+
+unicode-width = "0.2.0"

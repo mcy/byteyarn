@@ -1,0 +1,10 @@
+- quoted:
+    lexeme: 9
+    span: {span: [0, 12], text: "qnull(a)null"}
+    delims:
+    - {span: [0, 6], text: "qnull("}
+    - {span: [7, 12], text: ")null"}
+    contents: [{text: {span: [6, 7], text: "a"}}]
+- eof:
+    lexeme: 2147483647
+    span: {span: [13, 13], text: ""}

@@ -1,0 +1,46 @@
+error: unexpected `8` in `0o`-prefixed number
+ --> digital/invalid.txt:2:3
+  |
+2 | 0o8
+  |   ^
+  | --- help: because this value is octal (base 8), digits should be within '0'..='7'
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:562:34
+
+error: unexpected `8` in `0o`-prefixed number
+ --> digital/invalid.txt:3:4
+  |
+3 | 0o08
+  |    ^
+  | ---- help: because this value is octal (base 8), digits should be within '0'..='7'
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:562:34
+
+error: unexpected `a` in number
+ --> digital/invalid.txt:4:5
+  |
+4 | 0/0/aa11g
+  |     ^
+  | --------- help: because this value is decimal (base 10), digits should be within '0'..='9'
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:562:34
+
+error: unexpected `a` in number
+ --> digital/invalid.txt:4:6
+  |
+4 | 0/0/aa11g
+  |      ^
+  | --------- help: because this value is decimal (base 10), digits should be within '0'..='9'
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:562:34
+
+error: unexpected `g` in number
+ --> digital/invalid.txt:4:9
+  |
+4 | 0/0/aa11g
+  |         ^
+  | --------- help: because this value is decimal (base 10), digits should be within '0'..='9'
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:562:34
+
+error: aborting due to 5 errors

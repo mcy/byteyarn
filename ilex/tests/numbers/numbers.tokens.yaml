@@ -1,0 +1,234 @@
+- ident:
+    lexeme: 5
+    span: {span: [0, 1], text: "0"}
+    radix: 10
+    blocks: [{span: [0, 1], text: "0"}]
+    exponents: []
+- keyword:
+    lexeme: 0
+    span: {span: [1, 2], text: ","}
+- ident:
+    lexeme: 4
+    span: {span: [3, 6], text: "-00"}
+    prefix: {span: [3, 4], text: "-"}
+    radix: 8
+    sign: "-"
+    blocks: [{span: [5, 6], text: "0"}]
+    exponents: []
+- keyword:
+    lexeme: 0
+    span: {span: [6, 7], text: ","}
+- ident:
+    lexeme: 5
+    span: {span: [8, 12], text: "-0.0"}
+    radix: 10
+    sign: "-"
+    blocks:
+    - {span: [9, 10], text: "0"}
+    - {span: [11, 12], text: "0"}
+    exponents: []
+- keyword:
+    lexeme: 0
+    span: {span: [12, 13], text: ","}
+- ident:
+    lexeme: 5
+    span: {span: [14, 24], text: "123.456e78"}
+    radix: 10
+    blocks:
+    - {span: [14, 17], text: "123"}
+    - {span: [18, 21], text: "456"}
+    exponents:
+    - span: {span: [14, 24], text: "123.456e78"}
+      prefix: {span: [21, 22], text: "e"}
+      radix: 10
+      blocks: [{span: [22, 24], text: "78"}]
+- keyword:
+    lexeme: 0
+    span: {span: [24, 25], text: ","}
+- ident:
+    lexeme: 5
+    span: {span: [26, 29], text: "9e9"}
+    radix: 10
+    blocks: [{span: [26, 27], text: "9"}]
+    exponents:
+    - span: {span: [26, 29], text: "9e9"}
+      prefix: {span: [27, 28], text: "e"}
+      radix: 10
+      blocks: [{span: [28, 29], text: "9"}]
+- keyword:
+    lexeme: 0
+    span: {span: [29, 30], text: ","}
+- ident:
+    lexeme: 5
+    span: {span: [31, 35], text: "-9e9"}
+    radix: 10
+    sign: "-"
+    blocks: [{span: [32, 33], text: "9"}]
+    exponents:
+    - span: {span: [31, 35], text: "-9e9"}
+      prefix: {span: [33, 34], text: "e"}
+      radix: 10
+      blocks: [{span: [34, 35], text: "9"}]
+- keyword:
+    lexeme: 0
+    span: {span: [35, 36], text: ","}
+- ident:
+    lexeme: 5
+    span: {span: [37, 42], text: "+9e+9"}
+    radix: 10
+    sign: "+"
+    blocks: [{span: [38, 39], text: "9"}]
+    exponents:
+    - span: {span: [37, 42], text: "+9e+9"}
+      prefix: {span: [39, 40], text: "e"}
+      radix: 10
+      sign: "+"
+      blocks: [{span: [41, 42], text: "9"}]
+- keyword:
+    lexeme: 0
+    span: {span: [42, 43], text: ","}
+- ident:
+    lexeme: 5
+    span: {span: [44, 48], text: "9e-9"}
+    radix: 10
+    blocks: [{span: [44, 45], text: "9"}]
+    exponents:
+    - span: {span: [44, 48], text: "9e-9"}
+      prefix: {span: [45, 46], text: "e"}
+      radix: 10
+      sign: "-"
+      blocks: [{span: [47, 48], text: "9"}]
+- keyword:
+    lexeme: 0
+    span: {span: [48, 49], text: ","}
+- ident:
+    lexeme: 4
+    span: {span: [50, 55], text: "-0777"}
+    prefix: {span: [50, 51], text: "-"}
+    radix: 8
+    sign: "-"
+    blocks: [{span: [52, 55], text: "777"}]
+    exponents: []
+- keyword:
+    lexeme: 0
+    span: {span: [55, 56], text: ","}
+- ident:
+    lexeme: 4
+    span: {span: [57, 62], text: "0o777"}
+    prefix: {span: [57, 59], text: "0o"}
+    radix: 8
+    blocks: [{span: [59, 62], text: "777"}]
+    exponents: []
+- keyword:
+    lexeme: 0
+    span: {span: [62, 63], text: ","}
+- ident:
+    lexeme: 1
+    span: {span: [64, 69], text: "%1210"}
+    prefix: {span: [64, 65], text: "%"}
+    radix: 2
+    blocks: [{span: [65, 66], text: "1"}]
+    exponents:
+    - span: {span: [64, 69], text: "%1210"}
+      prefix: {span: [66, 67], text: "2"}
+      radix: 2
+      blocks: [{span: [67, 69], text: "10"}]
+- keyword:
+    lexeme: 0
+    span: {span: [69, 70], text: ","}
+- ident:
+    lexeme: 1
+    span: {span: [71, 85], text: "0b0.0000000101"}
+    prefix: {span: [71, 73], text: "0b"}
+    radix: 2
+    blocks:
+    - {span: [73, 74], text: "0"}
+    - {span: [75, 85], text: "0000000101"}
+    exponents: []
+- keyword:
+    lexeme: 0
+    span: {span: [85, 86], text: ","}
+- ident:
+    lexeme: 4
+    span: {span: [87, 95], text: "0o0.0024"}
+    prefix: {span: [87, 89], text: "0o"}
+    radix: 8
+    blocks:
+    - {span: [89, 90], text: "0"}
+    - {span: [91, 95], text: "0024"}
+    exponents: []
+- keyword:
+    lexeme: 0
+    span: {span: [95, 96], text: ","}
+- ident:
+    lexeme: 4
+    span: {span: [97, 106], text: "0O1.01p01"}
+    prefix: {span: [97, 99], text: "0O"}
+    radix: 8
+    blocks:
+    - {span: [99, 100], text: "1"}
+    - {span: [101, 103], text: "01"}
+    exponents:
+    - span: {span: [97, 106], text: "0O1.01p01"}
+      prefix: {span: [103, 104], text: "p"}
+      radix: 10
+      blocks: [{span: [104, 106], text: "01"}]
+- keyword:
+    lexeme: 0
+    span: {span: [106, 107], text: ","}
+- ident:
+    lexeme: 2
+    span: {span: [108, 120], text: "0xfff.eep+10"}
+    prefix: {span: [108, 110], text: "0x"}
+    radix: 16
+    blocks:
+    - {span: [110, 113], text: "fff"}
+    - {span: [114, 116], text: "ee"}
+    exponents:
+    - span: {span: [108, 120], text: "0xfff.eep+10"}
+      prefix: {span: [116, 117], text: "p"}
+      radix: 10
+      sign: "+"
+      blocks: [{span: [118, 120], text: "10"}]
+- keyword:
+    lexeme: 0
+    span: {span: [120, 121], text: ","}
+- ident:
+    lexeme: 2
+    span: {span: [122, 131], text: "$DEADBEEF"}
+    prefix: {span: [122, 123], text: "$"}
+    radix: 16
+    blocks: [{span: [123, 131], text: "DEADBEEF"}]
+    exponents: []
+- keyword:
+    lexeme: 0
+    span: {span: [131, 132], text: ","}
+- ident:
+    lexeme: 3
+    span: {span: [133, 145], text: "-0q0123.0123"}
+    prefix: {span: [133, 135], text: "-0"}
+    radix: 4
+    sign: "-"
+    blocks:
+    - {span: [136, 140], text: "0123"}
+    - {span: [141, 145], text: "0123"}
+    exponents: []
+- keyword:
+    lexeme: 0
+    span: {span: [145, 146], text: ","}
+- ident:
+    lexeme: 5
+    span: {span: [147, 150], text: "3^a"}
+    radix: 10
+    blocks: [{span: [147, 148], text: "3"}]
+    exponents:
+    - span: {span: [147, 150], text: "3^a"}
+      prefix: {span: [148, 149], text: "^"}
+      radix: 16
+      blocks: [{span: [149, 150], text: "a"}]
+- keyword:
+    lexeme: 0
+    span: {span: [150, 151], text: ","}
+- eof:
+    lexeme: 2147483647
+    span: {span: [151, 151], text: ""}

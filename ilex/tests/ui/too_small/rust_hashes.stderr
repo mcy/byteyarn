@@ -1,0 +1,25 @@
+error: unrecognized characters
+ --> too_small/rust_hashes.txt:1:10
+  |
+1 | r#'foo'# r'foo' q###'bar'### q##'bar'##
+  |          ^^^^^^
+  |
+  = note: reported at: ilex/src/rt/mod.rs:36:8
+
+error: unexpected closing `'##`
+ --> too_small/rust_hashes.txt:1:37
+  |
+1 | r#'foo'# r'foo' q###'bar'### q##'bar'##
+  |                                     ^^^ expected to be opened by `r##'`
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:254:22
+
+error: unrecognized characters
+ --> too_small/rust_hashes.txt:1:30
+  |
+1 | r#'foo'# r'foo' q###'bar'### q##'bar'##
+  |                              ^^^^^^^
+  |
+  = note: reported at: ilex/src/rt/mod.rs:36:8
+
+error: aborting due to 3 errors

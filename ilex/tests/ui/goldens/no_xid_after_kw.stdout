@@ -1,8 +1,0 @@
-error: unexpected closing `nullable`
- --> <input>:1:6
-  |
-1 | null nullable
-  |      ^^^^^^^^ expected to be opened by `--nullable`
-  |
-
-error: aborting due to previous error

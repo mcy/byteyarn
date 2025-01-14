@@ -1,0 +1,11 @@
+[package]
+name = "gilded-attr"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+proc2decl = { path = "../../proc2decl" }
+
+[lib]
+path = "lib.rs"
+proc-macro = true

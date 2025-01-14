@@ -1,0 +1,12 @@
+- keyword:
+    lexeme: 0
+    span: {span: [14, 18], text: "null"}
+- keyword:
+    lexeme: 1
+    span: {span: [37, 42], text: "-null"}
+- keyword:
+    lexeme: 0
+    span: {span: [43, 47], text: "null"}
+- eof:
+    lexeme: 2147483647
+    span: {span: [48, 48], text: ""}

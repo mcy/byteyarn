@@ -1,9 +1,0 @@
-error: extraneous characters after `$null[ ... ]null`
- --> <input>:1:28
-  |
-1 | $[] $null[]null $null[]nullable
-  |                            ^^^^
-  |                           -- help: maybe you meant to include a space here
-  |
-
-error: aborting due to previous error

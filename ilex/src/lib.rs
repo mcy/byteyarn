@@ -263,10 +263,8 @@ pub mod fp;
 pub mod ice;
 pub mod report;
 pub mod rule;
-pub mod testing;
 pub mod token;
 
-#[cfg(not(test))]
 pub use {
   crate::{
     file::Context,

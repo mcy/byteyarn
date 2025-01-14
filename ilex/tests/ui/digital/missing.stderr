@@ -1,0 +1,10 @@
+error: expected digits after `0x`, but found ` `
+ --> digital/missing.txt:2:3
+  |
+2 | 0x 0xf
+  |   ^ expected digits after `0x`
+  | ^^ because of this prefix
+  |
+  = note: reported at: ilex/src/rt/emit2.rs:540:18
+
+error: aborting due to previous error

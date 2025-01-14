@@ -13,3 +13,6 @@ license.workspace = true
 [lib]
 path = "lib.rs"
 proc-macro = true
+
+[dependencies]
+proc2decl = { path = "../../proc2decl" }

@@ -1,0 +1,12 @@
+{
+  "keywords": [null, true, false],
+  "string": "abcdefg",
+  "number": 42,
+  "int": 42.0,
+  "frac": 0.42,
+  "neg": -42,
+  "exp": 42e+42,
+  "nest": {
+    "escapes\n": "\"\\\/\b\f\n\t\r\u0000\u1234\uffff"
+  }
+}

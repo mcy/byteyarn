@@ -1,0 +1,245 @@
+- bracket:
+    lexeme: 6
+    span:
+      span: [0, 209]
+      text: |
+        {
+          "keywords": [null, true, false],
+          "string": "abcdefg",
+          "number": 42,
+          "int": 42.0,
+          "frac": 0.42,
+          "neg": -42,
+          "exp": 42e+42,
+          "nest": {
+            "escapes\n": "\"\\\/\b\f\n\t\r\u0000\u1234\uffff"
+          }
+        }
+    delims:
+    - {span: [0, 1], text: "{"}
+    - {span: [208, 209], text: "}"}
+    contents:
+    - quoted:
+        lexeme: 7
+        span: {span: [4, 14], text: "\"keywords\""}
+        delims:
+        - {span: [4, 5], text: "\""}
+        - {span: [13, 14], text: "\""}
+        contents: [{text: {span: [5, 13], text: "keywords"}}]
+    - keyword:
+        lexeme: 1
+        span: {span: [14, 15], text: ":"}
+    - bracket:
+        lexeme: 5
+        span:
+          span: [16, 35]
+          text: "[null, true, false]"
+        delims:
+        - {span: [16, 17], text: "["}
+        - {span: [34, 35], text: "]"}
+        contents:
+        - keyword:
+            lexeme: 4
+            span: {span: [17, 21], text: "null"}
+        - keyword:
+            lexeme: 0
+            span: {span: [21, 22], text: ","}
+        - keyword:
+            lexeme: 2
+            span: {span: [23, 27], text: "true"}
+        - keyword:
+            lexeme: 0
+            span: {span: [27, 28], text: ","}
+        - keyword:
+            lexeme: 3
+            span: {span: [29, 34], text: "false"}
+    - keyword:
+        lexeme: 0
+        span: {span: [35, 36], text: ","}
+    - quoted:
+        lexeme: 7
+        span: {span: [39, 47], text: "\"string\""}
+        delims:
+        - {span: [39, 40], text: "\""}
+        - {span: [46, 47], text: "\""}
+        contents: [{text: {span: [40, 46], text: "string"}}]
+    - keyword:
+        lexeme: 1
+        span: {span: [47, 48], text: ":"}
+    - quoted:
+        lexeme: 7
+        span: {span: [49, 58], text: "\"abcdefg\""}
+        delims:
+        - {span: [49, 50], text: "\""}
+        - {span: [57, 58], text: "\""}
+        contents: [{text: {span: [50, 57], text: "abcdefg"}}]
+    - keyword:
+        lexeme: 0
+        span: {span: [58, 59], text: ","}
+    - quoted:
+        lexeme: 7
+        span: {span: [62, 70], text: "\"number\""}
+        delims:
+        - {span: [62, 63], text: "\""}
+        - {span: [69, 70], text: "\""}
+        contents: [{text: {span: [63, 69], text: "number"}}]
+    - keyword:
+        lexeme: 1
+        span: {span: [70, 71], text: ":"}
+    - ident:
+        lexeme: 8
+        span: {span: [72, 74], text: "42"}
+        radix: 10
+        blocks: [{span: [72, 74], text: "42"}]
+        exponents: []
+    - keyword:
+        lexeme: 0
+        span: {span: [74, 75], text: ","}
+    - quoted:
+        lexeme: 7
+        span: {span: [78, 83], text: "\"int\""}
+        delims:
+        - {span: [78, 79], text: "\""}
+        - {span: [82, 83], text: "\""}
+        contents: [{text: {span: [79, 82], text: "int"}}]
+    - keyword:
+        lexeme: 1
+        span: {span: [83, 84], text: ":"}
+    - ident:
+        lexeme: 8
+        span: {span: [85, 89], text: "42.0"}
+        radix: 10
+        blocks:
+        - {span: [85, 87], text: "42"}
+        - {span: [88, 89], text: "0"}
+        exponents: []
+    - keyword:
+        lexeme: 0
+        span: {span: [89, 90], text: ","}
+    - quoted:
+        lexeme: 7
+        span: {span: [93, 99], text: "\"frac\""}
+        delims:
+        - {span: [93, 94], text: "\""}
+        - {span: [98, 99], text: "\""}
+        contents: [{text: {span: [94, 98], text: "frac"}}]
+    - keyword:
+        lexeme: 1
+        span: {span: [99, 100], text: ":"}
+    - ident:
+        lexeme: 8
+        span: {span: [101, 105], text: "0.42"}
+        radix: 10
+        blocks:
+        - {span: [101, 102], text: "0"}
+        - {span: [103, 105], text: "42"}
+        exponents: []
+    - keyword:
+        lexeme: 0
+        span: {span: [105, 106], text: ","}
+    - quoted:
+        lexeme: 7
+        span: {span: [109, 114], text: "\"neg\""}
+        delims:
+        - {span: [109, 110], text: "\""}
+        - {span: [113, 114], text: "\""}
+        contents: [{text: {span: [110, 113], text: "neg"}}]
+    - keyword:
+        lexeme: 1
+        span: {span: [114, 115], text: ":"}
+    - ident:
+        lexeme: 8
+        span: {span: [116, 119], text: "-42"}
+        radix: 10
+        sign: "-"
+        blocks: [{span: [117, 119], text: "42"}]
+        exponents: []
+    - keyword:
+        lexeme: 0
+        span: {span: [119, 120], text: ","}
+    - quoted:
+        lexeme: 7
+        span: {span: [123, 128], text: "\"exp\""}
+        delims:
+        - {span: [123, 124], text: "\""}
+        - {span: [127, 128], text: "\""}
+        contents: [{text: {span: [124, 127], text: "exp"}}]
+    - keyword:
+        lexeme: 1
+        span: {span: [128, 129], text: ":"}
+    - ident:
+        lexeme: 8
+        span: {span: [130, 136], text: "42e+42"}
+        radix: 10
+        blocks: [{span: [130, 132], text: "42"}]
+        exponents:
+        - span: {span: [130, 136], text: "42e+42"}
+          prefix: {span: [132, 133], text: "e"}
+          radix: 10
+          sign: "+"
+          blocks: [{span: [134, 136], text: "42"}]
+    - keyword:
+        lexeme: 0
+        span: {span: [136, 137], text: ","}
+    - quoted:
+        lexeme: 7
+        span: {span: [140, 146], text: "\"nest\""}
+        delims:
+        - {span: [140, 141], text: "\""}
+        - {span: [145, 146], text: "\""}
+        contents: [{text: {span: [141, 145], text: "nest"}}]
+    - keyword:
+        lexeme: 1
+        span: {span: [146, 147], text: ":"}
+    - bracket:
+        lexeme: 6
+        span:
+          span: [148, 207]
+          text: |
+            {
+                "escapes\n": "\"\\\/\b\f\n\t\r\u0000\u1234\uffff"
+              }
+        delims:
+        - {span: [148, 149], text: "{"}
+        - {span: [206, 207], text: "}"}
+        contents:
+        - quoted:
+            lexeme: 7
+            span:
+              span: [154, 165]
+              text: "\"escapes\\n\""
+            delims:
+            - {span: [154, 155], text: "\""}
+            - {span: [164, 165], text: "\""}
+            contents:
+            - text: {span: [155, 162], text: "escapes"}
+            - {esc: {span: [162, 164], text: "\\n"}}
+        - keyword:
+            lexeme: 1
+            span: {span: [165, 166], text: ":"}
+        - quoted:
+            lexeme: 7
+            span:
+              span: [167, 203]
+              text: "\"\\\"\\\\\\/\\b\\f\\n\\t\\r\\u0000\\u1234\\uffff\""
+            delims:
+            - {span: [167, 168], text: "\""}
+            - {span: [202, 203], text: "\""}
+            contents:
+            - {esc: {span: [168, 170], text: "\\\""}}
+            - {esc: {span: [170, 172], text: "\\\\"}}
+            - {esc: {span: [172, 174], text: "\\/"}}
+            - {esc: {span: [174, 176], text: "\\b"}}
+            - {esc: {span: [176, 178], text: "\\f"}}
+            - {esc: {span: [178, 180], text: "\\n"}}
+            - {esc: {span: [180, 182], text: "\\t"}}
+            - {esc: {span: [182, 184], text: "\\r"}}
+            - esc: {span: [184, 186], text: "\\u"}
+              data: {span: [186, 190], text: "0000"}
+            - esc: {span: [190, 192], text: "\\u"}
+              data: {span: [192, 196], text: "1234"}
+            - esc: {span: [196, 198], text: "\\u"}
+              data: {span: [198, 202], text: "ffff"}
+- eof:
+    lexeme: 2147483647
+    span: {span: [209, 209], text: ""}

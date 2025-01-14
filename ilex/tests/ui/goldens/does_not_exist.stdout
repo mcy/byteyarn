@@ -1,3 +1,0 @@
-error: could not open input file `does_not_exist`: No such file or directory (os error 2)
-
-error: aborting due to previous error

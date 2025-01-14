@@ -35,6 +35,7 @@ use crate::Never;
 use crate::WrongKind;
 
 mod stream;
+pub mod summary;
 
 pub use stream::switch::switch;
 pub use stream::switch::Switch;
