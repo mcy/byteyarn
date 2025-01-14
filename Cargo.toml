@@ -1,5 +1,12 @@
 [workspace]
-members = ["byteyarn", "buf-trait", "ilex", "ilex/attr", "twie", "proc2decl"]
+members = [
+  "allman",
+  "byteyarn",
+  "buf-trait",
+  "ilex", "ilex/attr",
+  "proc2decl",
+  "twie",
+]
 resolver = "2"
 
 [workspace.package]
