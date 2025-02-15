@@ -1,5 +1,7 @@
 use std::borrow::Borrow;
+use std::convert::Infallible;
 use std::fmt;
+use std::str::FromStr;
 use std::str::Utf8Error;
 
 use crate::YarnBox;
@@ -221,6 +223,14 @@ impl From<YarnBox<'_, str>> for String {
 impl From<YarnRef<'_, str>> for String {
   fn from(y: YarnRef<str>) -> Self {
     y.to_string()
+  }
+}
+
+impl FromStr for YarnBox<'static, str> {
+  type Err = Infallible;
+
+  fn from_str(s: &str) -> Result<Self, Self::Err> {
+    Ok(Self::copy(s))
   }
 }
 
